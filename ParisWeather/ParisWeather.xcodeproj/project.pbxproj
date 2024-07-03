@@ -40,6 +40,20 @@
 		DAD374C62C358ACF005A4EDF /* GetForecastUseCaseUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374C52C358ACF005A4EDF /* GetForecastUseCaseUnitTests.swift */; };
 		DAD374C82C358BB9005A4EDF /* RemoteWeatherDataSourceUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374C72C358BB9005A4EDF /* RemoteWeatherDataSourceUnitTests.swift */; };
 		DAD374CA2C358CCD005A4EDF /* WeatherRepositoryImplementationUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374C92C358CCD005A4EDF /* WeatherRepositoryImplementationUnitTests.swift */; };
+		DAD374CC2C35935B005A4EDF /* WeatherConditionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374CB2C35935B005A4EDF /* WeatherConditionMock.swift */; };
+		DAD374CE2C359465005A4EDF /* ServerWeatherConditionUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374CD2C359465005A4EDF /* ServerWeatherConditionUnitTests.swift */; };
+		DAD374D02C35965B005A4EDF /* WeatherConditionUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374CF2C35965B005A4EDF /* WeatherConditionUnitTests.swift */; };
+		DAD374D22C35974C005A4EDF /* CloudsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374D12C35974C005A4EDF /* CloudsMock.swift */; };
+		DAD374D42C35979F005A4EDF /* ServerCloudsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374D32C35979F005A4EDF /* ServerCloudsUnitTests.swift */; };
+		DAD374D82C359804005A4EDF /* WindMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374D72C359804005A4EDF /* WindMock.swift */; };
+		DAD374DA2C3598C0005A4EDF /* SysMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374D92C3598C0005A4EDF /* SysMock.swift */; };
+		DAD374DC2C359920005A4EDF /* ForecastMainMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374DB2C359920005A4EDF /* ForecastMainMock.swift */; };
+		DAD374DE2C359A6F005A4EDF /* ForecastSlotMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374DD2C359A6F005A4EDF /* ForecastSlotMock.swift */; };
+		DAD374E02C359DBC005A4EDF /* ServerWindMockUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374DF2C359DBC005A4EDF /* ServerWindMockUnitTests.swift */; };
+		DAD374E22C359ED6005A4EDF /* ServerSysMockUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374E12C359ED6005A4EDF /* ServerSysMockUnitTests.swift */; };
+		DAD374E42C359F57005A4EDF /* ServerForecastMainUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374E32C359F57005A4EDF /* ServerForecastMainUnitTests.swift */; };
+		DAD374E62C35A160005A4EDF /* ServerForecastSlotUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374E52C35A160005A4EDF /* ServerForecastSlotUnitTests.swift */; };
+		DAD374E82C35A2ED005A4EDF /* ForecastSlotUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374E72C35A2ED005A4EDF /* ForecastSlotUnitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +111,20 @@
 		DAD374C52C358ACF005A4EDF /* GetForecastUseCaseUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetForecastUseCaseUnitTests.swift; sourceTree = "<group>"; };
 		DAD374C72C358BB9005A4EDF /* RemoteWeatherDataSourceUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWeatherDataSourceUnitTests.swift; sourceTree = "<group>"; };
 		DAD374C92C358CCD005A4EDF /* WeatherRepositoryImplementationUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepositoryImplementationUnitTests.swift; sourceTree = "<group>"; };
+		DAD374CB2C35935B005A4EDF /* WeatherConditionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherConditionMock.swift; sourceTree = "<group>"; };
+		DAD374CD2C359465005A4EDF /* ServerWeatherConditionUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerWeatherConditionUnitTests.swift; sourceTree = "<group>"; };
+		DAD374CF2C35965B005A4EDF /* WeatherConditionUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherConditionUnitTests.swift; sourceTree = "<group>"; };
+		DAD374D12C35974C005A4EDF /* CloudsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudsMock.swift; sourceTree = "<group>"; };
+		DAD374D32C35979F005A4EDF /* ServerCloudsUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCloudsUnitTests.swift; sourceTree = "<group>"; };
+		DAD374D72C359804005A4EDF /* WindMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindMock.swift; sourceTree = "<group>"; };
+		DAD374D92C3598C0005A4EDF /* SysMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SysMock.swift; sourceTree = "<group>"; };
+		DAD374DB2C359920005A4EDF /* ForecastMainMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastMainMock.swift; sourceTree = "<group>"; };
+		DAD374DD2C359A6F005A4EDF /* ForecastSlotMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastSlotMock.swift; sourceTree = "<group>"; };
+		DAD374DF2C359DBC005A4EDF /* ServerWindMockUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerWindMockUnitTests.swift; sourceTree = "<group>"; };
+		DAD374E12C359ED6005A4EDF /* ServerSysMockUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSysMockUnitTests.swift; sourceTree = "<group>"; };
+		DAD374E32C359F57005A4EDF /* ServerForecastMainUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerForecastMainUnitTests.swift; sourceTree = "<group>"; };
+		DAD374E52C35A160005A4EDF /* ServerForecastSlotUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerForecastSlotUnitTests.swift; sourceTree = "<group>"; };
+		DAD374E72C35A2ED005A4EDF /* ForecastSlotUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastSlotUnitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +334,12 @@
 		DAD374BC2C3589C7005A4EDF /* ServerEntities */ = {
 			isa = PBXGroup;
 			children = (
+				DAD374CD2C359465005A4EDF /* ServerWeatherConditionUnitTests.swift */,
+				DAD374D32C35979F005A4EDF /* ServerCloudsUnitTests.swift */,
+				DAD374DF2C359DBC005A4EDF /* ServerWindMockUnitTests.swift */,
+				DAD374E12C359ED6005A4EDF /* ServerSysMockUnitTests.swift */,
+				DAD374E32C359F57005A4EDF /* ServerForecastMainUnitTests.swift */,
+				DAD374E52C35A160005A4EDF /* ServerForecastSlotUnitTests.swift */,
 			);
 			path = ServerEntities;
 			sourceTree = "<group>";
@@ -313,6 +347,8 @@
 		DAD374BD2C3589C7005A4EDF /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				DAD374CF2C35965B005A4EDF /* WeatherConditionUnitTests.swift */,
+				DAD374E72C35A2ED005A4EDF /* ForecastSlotUnitTests.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -322,6 +358,12 @@
 			children = (
 				DAD374C12C358A46005A4EDF /* URLProtocolMock.swift */,
 				DAD374C32C358A63005A4EDF /* MockWeatherRepository.swift */,
+				DAD374CB2C35935B005A4EDF /* WeatherConditionMock.swift */,
+				DAD374D12C35974C005A4EDF /* CloudsMock.swift */,
+				DAD374D72C359804005A4EDF /* WindMock.swift */,
+				DAD374D92C3598C0005A4EDF /* SysMock.swift */,
+				DAD374DB2C359920005A4EDF /* ForecastMainMock.swift */,
+				DAD374DD2C359A6F005A4EDF /* ForecastSlotMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -505,11 +547,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD374DC2C359920005A4EDF /* ForecastMainMock.swift in Sources */,
+				DAD374D42C35979F005A4EDF /* ServerCloudsUnitTests.swift in Sources */,
 				DAD374C62C358ACF005A4EDF /* GetForecastUseCaseUnitTests.swift in Sources */,
 				DAD374C42C358A63005A4EDF /* MockWeatherRepository.swift in Sources */,
+				DAD374DE2C359A6F005A4EDF /* ForecastSlotMock.swift in Sources */,
+				DAD374CC2C35935B005A4EDF /* WeatherConditionMock.swift in Sources */,
 				DAD374C22C358A46005A4EDF /* URLProtocolMock.swift in Sources */,
+				DAD374DA2C3598C0005A4EDF /* SysMock.swift in Sources */,
+				DAD374D02C35965B005A4EDF /* WeatherConditionUnitTests.swift in Sources */,
+				DAD374E82C35A2ED005A4EDF /* ForecastSlotUnitTests.swift in Sources */,
 				DAD374CA2C358CCD005A4EDF /* WeatherRepositoryImplementationUnitTests.swift in Sources */,
+				DAD374E22C359ED6005A4EDF /* ServerSysMockUnitTests.swift in Sources */,
+				DAD374E62C35A160005A4EDF /* ServerForecastSlotUnitTests.swift in Sources */,
 				DAD374C82C358BB9005A4EDF /* RemoteWeatherDataSourceUnitTests.swift in Sources */,
+				DAD374CE2C359465005A4EDF /* ServerWeatherConditionUnitTests.swift in Sources */,
+				DAD374E42C359F57005A4EDF /* ServerForecastMainUnitTests.swift in Sources */,
+				DAD374E02C359DBC005A4EDF /* ServerWindMockUnitTests.swift in Sources */,
+				DAD374D22C35974C005A4EDF /* CloudsMock.swift in Sources */,
+				DAD374D82C359804005A4EDF /* WindMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
