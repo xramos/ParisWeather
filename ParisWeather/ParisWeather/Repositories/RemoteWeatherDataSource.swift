@@ -42,7 +42,7 @@ extension RemoteWeatherDataSource {
  
     func getForecastEndpoint() -> URLRequest {
         
-        let endpoint = "\(baseURLString)\(RemoteWeatherDataSource.forecast_UrlPath)"
+        let endpoint = "\(baseURLString)/\(RemoteWeatherDataSource.forecast_UrlPath)"
         
         var components = URLComponents(string: endpoint)
         

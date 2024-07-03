@@ -10,7 +10,6 @@
 		DAD374582C353875005A4EDF /* ParisWeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374572C353875005A4EDF /* ParisWeatherApp.swift */; };
 		DAD3745C2C353876005A4EDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD3745B2C353876005A4EDF /* Assets.xcassets */; };
 		DAD374602C353876005A4EDF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD3745F2C353876005A4EDF /* Preview Assets.xcassets */; };
-		DAD3746A2C353876005A4EDF /* ParisWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374692C353876005A4EDF /* ParisWeatherTests.swift */; };
 		DAD374742C353876005A4EDF /* ParisWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374732C353876005A4EDF /* ParisWeatherUITests.swift */; };
 		DAD374762C353876005A4EDF /* ParisWeatherUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374752C353876005A4EDF /* ParisWeatherUITestsLaunchTests.swift */; };
 		DAD374832C3538F8005A4EDF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374822C3538F8005A4EDF /* Constants.swift */; };
@@ -36,6 +35,11 @@
 		DAD374B52C3566DD005A4EDF /* GetForecastUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374B42C3566DD005A4EDF /* GetForecastUseCase.swift */; };
 		DAD374B72C356B4C005A4EDF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374B62C356B4C005A4EDF /* HomeView.swift */; };
 		DAD374BA2C356BE7005A4EDF /* ForecastCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374B92C356BE7005A4EDF /* ForecastCardView.swift */; };
+		DAD374C22C358A46005A4EDF /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374C12C358A46005A4EDF /* URLProtocolMock.swift */; };
+		DAD374C42C358A63005A4EDF /* MockWeatherRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374C32C358A63005A4EDF /* MockWeatherRepository.swift */; };
+		DAD374C62C358ACF005A4EDF /* GetForecastUseCaseUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374C52C358ACF005A4EDF /* GetForecastUseCaseUnitTests.swift */; };
+		DAD374C82C358BB9005A4EDF /* RemoteWeatherDataSourceUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374C72C358BB9005A4EDF /* RemoteWeatherDataSourceUnitTests.swift */; };
+		DAD374CA2C358CCD005A4EDF /* WeatherRepositoryImplementationUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374C92C358CCD005A4EDF /* WeatherRepositoryImplementationUnitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +66,6 @@
 		DAD3745D2C353876005A4EDF /* ParisWeather.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ParisWeather.entitlements; sourceTree = "<group>"; };
 		DAD3745F2C353876005A4EDF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DAD374652C353876005A4EDF /* ParisWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParisWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAD374692C353876005A4EDF /* ParisWeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParisWeatherTests.swift; sourceTree = "<group>"; };
 		DAD3746F2C353876005A4EDF /* ParisWeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParisWeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD374732C353876005A4EDF /* ParisWeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParisWeatherUITests.swift; sourceTree = "<group>"; };
 		DAD374752C353876005A4EDF /* ParisWeatherUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParisWeatherUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -89,6 +92,11 @@
 		DAD374B42C3566DD005A4EDF /* GetForecastUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetForecastUseCase.swift; sourceTree = "<group>"; };
 		DAD374B62C356B4C005A4EDF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DAD374B92C356BE7005A4EDF /* ForecastCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCardView.swift; sourceTree = "<group>"; };
+		DAD374C12C358A46005A4EDF /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
+		DAD374C32C358A63005A4EDF /* MockWeatherRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWeatherRepository.swift; sourceTree = "<group>"; };
+		DAD374C52C358ACF005A4EDF /* GetForecastUseCaseUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetForecastUseCaseUnitTests.swift; sourceTree = "<group>"; };
+		DAD374C72C358BB9005A4EDF /* RemoteWeatherDataSourceUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWeatherDataSourceUnitTests.swift; sourceTree = "<group>"; };
+		DAD374C92C358CCD005A4EDF /* WeatherRepositoryImplementationUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepositoryImplementationUnitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,7 +175,10 @@
 		DAD374682C353876005A4EDF /* ParisWeatherTests */ = {
 			isa = PBXGroup;
 			children = (
-				DAD374692C353876005A4EDF /* ParisWeatherTests.swift */,
+				DAD374BB2C3589C7005A4EDF /* Entities */,
+				DAD374BE2C3589C7005A4EDF /* Mocks */,
+				DAD374BF2C3589C7005A4EDF /* Repositories */,
+				DAD374C02C3589C7005A4EDF /* UseCases */,
 			);
 			path = ParisWeatherTests;
 			sourceTree = "<group>";
@@ -283,6 +294,55 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		DAD374BB2C3589C7005A4EDF /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				DAD374BC2C3589C7005A4EDF /* ServerEntities */,
+				DAD374BD2C3589C7005A4EDF /* Entities */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		DAD374BC2C3589C7005A4EDF /* ServerEntities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ServerEntities;
+			sourceTree = "<group>";
+		};
+		DAD374BD2C3589C7005A4EDF /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		DAD374BE2C3589C7005A4EDF /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DAD374C12C358A46005A4EDF /* URLProtocolMock.swift */,
+				DAD374C32C358A63005A4EDF /* MockWeatherRepository.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		DAD374BF2C3589C7005A4EDF /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				DAD374C72C358BB9005A4EDF /* RemoteWeatherDataSourceUnitTests.swift */,
+				DAD374C92C358CCD005A4EDF /* WeatherRepositoryImplementationUnitTests.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		DAD374C02C3589C7005A4EDF /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				DAD374C52C358ACF005A4EDF /* GetForecastUseCaseUnitTests.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -354,6 +414,7 @@
 					};
 					DAD374642C353876005A4EDF = {
 						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1500;
 						TestTargetID = DAD374532C353875005A4EDF;
 					};
 					DAD3746E2C353876005A4EDF = {
@@ -444,7 +505,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAD3746A2C353876005A4EDF /* ParisWeatherTests.swift in Sources */,
+				DAD374C62C358ACF005A4EDF /* GetForecastUseCaseUnitTests.swift in Sources */,
+				DAD374C42C358A63005A4EDF /* MockWeatherRepository.swift in Sources */,
+				DAD374C22C358A46005A4EDF /* URLProtocolMock.swift in Sources */,
+				DAD374CA2C358CCD005A4EDF /* WeatherRepositoryImplementationUnitTests.swift in Sources */,
+				DAD374C82C358BB9005A4EDF /* RemoteWeatherDataSourceUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,6 +731,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -677,6 +743,7 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParisWeather.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ParisWeather";
@@ -688,6 +755,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
