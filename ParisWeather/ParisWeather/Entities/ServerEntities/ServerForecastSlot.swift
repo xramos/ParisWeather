@@ -1,0 +1,75 @@
+//
+//  ServerForecastDay.swift
+//  ParisWeather
+//
+//  Created by Xavier Ramos on 3/7/24.
+//
+
+import Foundation
+
+struct ServerForecastSlot: Codable {
+    
+    let visibility: Int
+    let pop: Double
+    let dtTxt: String
+    
+    let main: ServerForecastMain
+    let weather: [ServerWeatherCondition]
+    let clouds: ServerClouds
+    let wind: ServerWind
+    let sys: ServerSys
+    
+    func convertToEntity() -> ForecastSlot {
+        
+        return ForecastSlot(averageVisibility: visibility,
+                            precipitationProbability: Int(pop*100),
+                            dateTimeTxt: dtTxt,
+                            dateTime: getDate(),
+                            temperature: main.temp,
+                            feelsLikeTemperature: main.feelsLike,
+                            minTemperature: main.tempMin,
+                            maxTemperature: main.tempMax,
+                            pressure: main.pressure,
+                            seaLevelPressure: main.seaLevel,
+                            groundLevelPressure: main.grndLevel,
+                            humidity: main.humidity,
+                            weatherConditions: getWeatherConditions(),
+                            clouddiness: clouds.all,
+                            windSpeed: wind.speed,
+                            windDirection: wind.deg,
+                            windGust: wind.gust,
+                            partOfDay: getPartOfDay())
+    }
+}
+
+fileprivate extension ServerForecastSlot {
+    
+    func getWeatherConditions() -> [WeatherCondition] {
+        
+        var weatherConditions: [WeatherCondition] = []
+        
+        for serverWeather in weather {
+            weatherConditions.append(serverWeather.convertToEntity())
+        }
+        
+        return weatherConditions
+    }
+    
+    func getDate() -> Date? {
+        
+        let formatter = DateFormatter.forecastDate
+        
+        return formatter.date(from: dtTxt)
+    }
+    
+    func getPartOfDay() -> PartOfDay {
+        
+        if sys.pod == "n" {
+            return PartOfDay.night
+        } else if sys.pod == "d" {
+            return PartOfDay.day
+        } else {
+            return PartOfDay.unknown
+        }
+    }
+}
