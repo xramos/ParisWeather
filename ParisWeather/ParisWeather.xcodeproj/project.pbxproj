@@ -54,6 +54,7 @@
 		DAD374E42C359F57005A4EDF /* ServerForecastMainUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374E32C359F57005A4EDF /* ServerForecastMainUnitTests.swift */; };
 		DAD374E62C35A160005A4EDF /* ServerForecastSlotUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374E52C35A160005A4EDF /* ServerForecastSlotUnitTests.swift */; };
 		DAD374E82C35A2ED005A4EDF /* ForecastSlotUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374E72C35A2ED005A4EDF /* ForecastSlotUnitTests.swift */; };
+		DAD374EC2C35A6A1005A4EDF /* HomeViewModelUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374EB2C35A6A1005A4EDF /* HomeViewModelUnitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		DAD374E32C359F57005A4EDF /* ServerForecastMainUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerForecastMainUnitTests.swift; sourceTree = "<group>"; };
 		DAD374E52C35A160005A4EDF /* ServerForecastSlotUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerForecastSlotUnitTests.swift; sourceTree = "<group>"; };
 		DAD374E72C35A2ED005A4EDF /* ForecastSlotUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastSlotUnitTests.swift; sourceTree = "<group>"; };
+		DAD374EB2C35A6A1005A4EDF /* HomeViewModelUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelUnitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 		DAD374682C353876005A4EDF /* ParisWeatherTests */ = {
 			isa = PBXGroup;
 			children = (
+				DAD374E92C35A693005A4EDF /* Scenes */,
 				DAD374BB2C3589C7005A4EDF /* Entities */,
 				DAD374BE2C3589C7005A4EDF /* Mocks */,
 				DAD374BF2C3589C7005A4EDF /* Repositories */,
@@ -385,6 +388,22 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
+		DAD374E92C35A693005A4EDF /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				DAD374EA2C35A693005A4EDF /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		DAD374EA2C35A693005A4EDF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DAD374EB2C35A6A1005A4EDF /* HomeViewModelUnitTests.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -550,6 +569,7 @@
 				DAD374DC2C359920005A4EDF /* ForecastMainMock.swift in Sources */,
 				DAD374D42C35979F005A4EDF /* ServerCloudsUnitTests.swift in Sources */,
 				DAD374C62C358ACF005A4EDF /* GetForecastUseCaseUnitTests.swift in Sources */,
+				DAD374EC2C35A6A1005A4EDF /* HomeViewModelUnitTests.swift in Sources */,
 				DAD374C42C358A63005A4EDF /* MockWeatherRepository.swift in Sources */,
 				DAD374DE2C359A6F005A4EDF /* ForecastSlotMock.swift in Sources */,
 				DAD374CC2C35935B005A4EDF /* WeatherConditionMock.swift in Sources */,
