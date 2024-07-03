@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PreviewSnapshots
 
 struct ForecastCardView: View {
     
@@ -73,12 +74,26 @@ struct ForecastCardView: View {
     }
 }
 
-#Preview {
-    ForecastCardView(temperature: 18,
-                     minTemperature: 17,
-                     maxTemperature: 20,
-                     precipitation: 2,
-                     humidity: 59,
-                     wind: 3,
-                     weatherIcon: "04d")
+struct ForecastCardView_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        
+        snapshots.previews.previewLayout(.sizeThatFits)
+    }
+    
+    static var snapshots: PreviewSnapshots<String> {
+        
+        PreviewSnapshots(configurations: [
+            .init(name: "Default", state: "")
+        ], configure: { state in
+                
+            ForecastCardView(temperature: 18,
+                             minTemperature: 17,
+                             maxTemperature: 20,
+                             precipitation: 2,
+                             humidity: 59,
+                             wind: 3,
+                             weatherIcon: "04d")
+        })
+    }
 }

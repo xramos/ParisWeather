@@ -55,6 +55,9 @@
 		DAD374E62C35A160005A4EDF /* ServerForecastSlotUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374E52C35A160005A4EDF /* ServerForecastSlotUnitTests.swift */; };
 		DAD374E82C35A2ED005A4EDF /* ForecastSlotUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374E72C35A2ED005A4EDF /* ForecastSlotUnitTests.swift */; };
 		DAD374EC2C35A6A1005A4EDF /* HomeViewModelUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374EB2C35A6A1005A4EDF /* HomeViewModelUnitTests.swift */; };
+		DAD374EF2C35AF31005A4EDF /* PreviewSnapshots in Frameworks */ = {isa = PBXBuildFile; productRef = DAD374EE2C35AF31005A4EDF /* PreviewSnapshots */; };
+		DAD374F12C35AF31005A4EDF /* PreviewSnapshotsTesting in Frameworks */ = {isa = PBXBuildFile; productRef = DAD374F02C35AF31005A4EDF /* PreviewSnapshotsTesting */; };
+		DAD374F42C35AFCC005A4EDF /* ForecastCardViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374F32C35AFCC005A4EDF /* ForecastCardViewSnapshotTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +130,7 @@
 		DAD374E52C35A160005A4EDF /* ServerForecastSlotUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerForecastSlotUnitTests.swift; sourceTree = "<group>"; };
 		DAD374E72C35A2ED005A4EDF /* ForecastSlotUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastSlotUnitTests.swift; sourceTree = "<group>"; };
 		DAD374EB2C35A6A1005A4EDF /* HomeViewModelUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelUnitTests.swift; sourceTree = "<group>"; };
+		DAD374F32C35AFCC005A4EDF /* ForecastCardViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCardViewSnapshotTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD374EF2C35AF31005A4EDF /* PreviewSnapshots in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD374F12C35AF31005A4EDF /* PreviewSnapshotsTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +211,7 @@
 		DAD374682C353876005A4EDF /* ParisWeatherTests */ = {
 			isa = PBXGroup;
 			children = (
+				DAD374F22C35AFB4005A4EDF /* Views */,
 				DAD374E92C35A693005A4EDF /* Scenes */,
 				DAD374BB2C3589C7005A4EDF /* Entities */,
 				DAD374BE2C3589C7005A4EDF /* Mocks */,
@@ -404,6 +411,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		DAD374F22C35AFB4005A4EDF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DAD374F32C35AFCC005A4EDF /* ForecastCardViewSnapshotTests.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -420,6 +435,9 @@
 			dependencies = (
 			);
 			name = ParisWeather;
+			packageProductDependencies = (
+				DAD374EE2C35AF31005A4EDF /* PreviewSnapshots */,
+			);
 			productName = ParisWeather;
 			productReference = DAD374542C353875005A4EDF /* ParisWeather.app */;
 			productType = "com.apple.product-type.application";
@@ -438,6 +456,9 @@
 				DAD374672C353876005A4EDF /* PBXTargetDependency */,
 			);
 			name = ParisWeatherTests;
+			packageProductDependencies = (
+				DAD374F02C35AF31005A4EDF /* PreviewSnapshotsTesting */,
+			);
 			productName = ParisWeatherTests;
 			productReference = DAD374652C353876005A4EDF /* ParisWeatherTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -493,6 +514,9 @@
 				Base,
 			);
 			mainGroup = DAD3744B2C353875005A4EDF;
+			packageReferences = (
+				DAD374ED2C35AF31005A4EDF /* XCRemoteSwiftPackageReference "swiftui-preview-snapshots" */,
+			);
 			productRefGroup = DAD374552C353875005A4EDF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -586,6 +610,7 @@
 				DAD374E02C359DBC005A4EDF /* ServerWindMockUnitTests.swift in Sources */,
 				DAD374D22C35974C005A4EDF /* CloudsMock.swift in Sources */,
 				DAD374D82C359804005A4EDF /* WindMock.swift in Sources */,
+				DAD374F42C35AFCC005A4EDF /* ForecastCardViewSnapshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -931,6 +956,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DAD374ED2C35AF31005A4EDF /* XCRemoteSwiftPackageReference "swiftui-preview-snapshots" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/doordash-oss/swiftui-preview-snapshots";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DAD374EE2C35AF31005A4EDF /* PreviewSnapshots */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAD374ED2C35AF31005A4EDF /* XCRemoteSwiftPackageReference "swiftui-preview-snapshots" */;
+			productName = PreviewSnapshots;
+		};
+		DAD374F02C35AF31005A4EDF /* PreviewSnapshotsTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAD374ED2C35AF31005A4EDF /* XCRemoteSwiftPackageReference "swiftui-preview-snapshots" */;
+			productName = PreviewSnapshotsTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DAD3744C2C353875005A4EDF /* Project object */;
 }
