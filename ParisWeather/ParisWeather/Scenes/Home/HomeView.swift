@@ -19,7 +19,8 @@ struct HomeView: View {
                 
                 if let forecast1 = viewModel.slots1.first {
                     
-                    ForecastCardView(temperature: forecast1.temperature,
+                    ForecastCardView(date: viewModel.getForecastDay(slot: forecast1),
+                                        temperature: forecast1.temperature,
                                      minTemperature: forecast1.minTemperature,
                                      maxTemperature: forecast1.maxTemperature,
                                      precipitation: forecast1.precipitationProbability,
@@ -30,7 +31,8 @@ struct HomeView: View {
                 
                 if let forecast2 = viewModel.slots2.first {
                     
-                    ForecastCardView(temperature: forecast2.temperature,
+                    ForecastCardView(date: viewModel.getForecastDay(slot: forecast2),
+                                     temperature: forecast2.temperature,
                                      minTemperature: forecast2.minTemperature,
                                      maxTemperature: forecast2.maxTemperature,
                                      precipitation: forecast2.precipitationProbability,
@@ -41,7 +43,8 @@ struct HomeView: View {
                 
                 if let forecast3 = viewModel.slots3.first {
                  
-                    ForecastCardView(temperature: forecast3.temperature,
+                    ForecastCardView(date: viewModel.getForecastDay(slot: forecast3),
+                                     temperature: forecast3.temperature,
                                      minTemperature: forecast3.minTemperature,
                                      maxTemperature: forecast3.maxTemperature,
                                      precipitation: forecast3.precipitationProbability,
@@ -52,7 +55,8 @@ struct HomeView: View {
                 
                 if let forecast4 = viewModel.slots4.first {
                     
-                    ForecastCardView(temperature: forecast4.temperature,
+                    ForecastCardView(date: viewModel.getForecastDay(slot: forecast4),
+                        temperature: forecast4.temperature,
                                      minTemperature: forecast4.minTemperature,
                                      maxTemperature: forecast4.maxTemperature,
                                      precipitation: forecast4.precipitationProbability,
@@ -63,7 +67,8 @@ struct HomeView: View {
                 
                 if let forecast5 = viewModel.slots5.first {
                     
-                    ForecastCardView(temperature: forecast5.temperature,
+                    ForecastCardView(date: viewModel.getForecastDay(slot: forecast5),
+                        temperature: forecast5.temperature,
                                      minTemperature: forecast5.minTemperature,
                                      maxTemperature: forecast5.maxTemperature,
                                      precipitation: forecast5.precipitationProbability,

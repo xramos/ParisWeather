@@ -71,4 +71,15 @@ class HomeViewModel: ObservableObject {
         
         return dateSlots
     }
+    
+    func getForecastDay(slot: ForecastSlot) -> String {
+        
+        let formatter = DateFormatter.weekDay
+        
+        let dayOfWeek = formatter.string(from: slot.dateTime!)
+        
+        let numDay = Calendar.current.dateComponents([.day], from: slot.dateTime!).day!
+        
+        return "\(dayOfWeek) \(numDay)"
+    }
 }
