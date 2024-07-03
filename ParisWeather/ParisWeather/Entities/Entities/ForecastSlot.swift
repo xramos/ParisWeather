@@ -13,17 +13,17 @@ struct ForecastSlot {
     let precipitationProbability: Int
     let dateTimeTxt: String
     let dateTime: Date?
-    let temperature: Double
-    let feelsLikeTemperature: Double
-    let minTemperature: Double
-    let maxTemperature: Double
+    let temperature: Int
+    let feelsLikeTemperature: Int
+    let minTemperature: Int
+    let maxTemperature: Int
     let pressure: Int
     let seaLevelPressure: Int
     let groundLevelPressure: Int
     let humidity: Int
     let weatherConditions: [WeatherCondition]
     let clouddiness: Int
-    let windSpeed: Double
+    let windSpeed: Int
     let windDirection: Int
     let windGust: Double
     let partOfDay: PartOfDay
