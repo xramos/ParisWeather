@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct ParisWeatherApp: App {
+    
     var body: some Scene {
+        
         WindowGroup {
-            ContentView()
+            
+            NavigationStack {
+                
+                HomeView()
+            }
         }
     }
 }
