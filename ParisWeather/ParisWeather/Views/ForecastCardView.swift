@@ -45,17 +45,17 @@ struct ForecastCardView: View {
                     .foregroundStyle(Color.neutralText)
                     .fontWeight(.bold)
                 
-                Text("\(temperature)°C")
+                Text(String(format: Constants.tempString, "\(temperature)"))
                     .font(.title)
                     .foregroundStyle(Color.accentColor)
              
                 HStack {
-                    Text("H: \(maxTemperature)°C")
+                    Text(String(format: Constants.maxTempString, "\(maxTemperature)"))
                         .font(.caption)
                         .foregroundStyle(Color.neutralText)
                     
                     
-                    Text("L: \(minTemperature)°C")
+                    Text(String(format: Constants.minTempString, "\(minTemperature)"))
                         .font(.caption)
                         .foregroundStyle(Color.neutralText)
                 }
@@ -63,23 +63,23 @@ struct ForecastCardView: View {
             
             Spacer()
             
-            AsyncImage(url: URL(string: "https://openweathermap.org/img/wn/\(weatherIcon)@2x.png")) { image in
+            AsyncImage(url: URL(string: String(format: Constants.iconUrl, weatherIcon))) { image in
                 
                 image.image?.resizable()
             }
-            .frame(width: 80, height: 80)
+            .frame(width: Constants.iconHeight, height: Constants.iconHeight)
          
-            VStack(alignment: .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: Constants.padding) {
                 
-                Text("Precipitation: \(precipitation)%")
+                Text(String(format: Constants.precipitationString, "\(precipitation)", "%"))
                     .font(.footnote)
                     .foregroundStyle(Color.neutralText)
                 
-                Text("Humidity: \(humidity)%")
+                Text(String(format: Constants.humidityString, "\(humidity)", "%"))
                     .font(.footnote)
                     .foregroundStyle(Color.neutralText)
                 
-                Text("Wind: \(wind) m/s")
+                Text(String(format: Constants.windString, "\(wind)"))
                     .font(.footnote)
                     .foregroundStyle(Color.neutralText)
             }

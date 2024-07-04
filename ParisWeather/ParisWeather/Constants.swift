@@ -16,4 +16,15 @@ struct Constants {
     static let padding: CGFloat = 8
     
     static let cornerRadius: CGFloat = 10
+    
+    static let iconHeight: CGFloat = 80
+    
+    static let iconUrl = "https://openweathermap.org/img/wn/%@@2x.png"
+    
+    static let tempString = "%@°C"
+    static let maxTempString = "H: %@°C"
+    static let minTempString = "L: %@°C"
+    static let precipitationString = "Precipitation: %@%@"
+    static let humidityString = "Humidity: %@%@"
+    static let windString = "Wind: %@ m/s"
 }
