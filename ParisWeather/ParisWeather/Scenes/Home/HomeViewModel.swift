@@ -18,6 +18,8 @@ class HomeViewModel: ObservableObject {
     @Published var slots4: [ForecastSlot] = []
     @Published var slots5: [ForecastSlot] = []
     
+    @Published var selectedSlots: [ForecastSlot] = []
+    
     private var getForecastCancellable: AnyCancellable?
     
     // MARK: - Methods

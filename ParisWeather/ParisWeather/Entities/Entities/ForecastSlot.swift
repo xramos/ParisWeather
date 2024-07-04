@@ -7,8 +7,9 @@
 
 import Foundation
 
-struct ForecastSlot {
+struct ForecastSlot: Identifiable {
     
+    let id: String = UUID().uuidString
     let averageVisibility: Int
     let precipitationProbability: Int
     let dateTimeTxt: String

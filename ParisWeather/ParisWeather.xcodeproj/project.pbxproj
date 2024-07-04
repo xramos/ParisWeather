@@ -58,6 +58,8 @@
 		DAD374EF2C35AF31005A4EDF /* PreviewSnapshots in Frameworks */ = {isa = PBXBuildFile; productRef = DAD374EE2C35AF31005A4EDF /* PreviewSnapshots */; };
 		DAD374F12C35AF31005A4EDF /* PreviewSnapshotsTesting in Frameworks */ = {isa = PBXBuildFile; productRef = DAD374F02C35AF31005A4EDF /* PreviewSnapshotsTesting */; };
 		DAD374F42C35AFCC005A4EDF /* ForecastCardViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374F32C35AFCC005A4EDF /* ForecastCardViewSnapshotTests.swift */; };
+		DAD374F72C36B021005A4EDF /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374F62C36B021005A4EDF /* DetailViewModel.swift */; };
+		DAD374F92C36B066005A4EDF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374F82C36B066005A4EDF /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +133,8 @@
 		DAD374E72C35A2ED005A4EDF /* ForecastSlotUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastSlotUnitTests.swift; sourceTree = "<group>"; };
 		DAD374EB2C35A6A1005A4EDF /* HomeViewModelUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelUnitTests.swift; sourceTree = "<group>"; };
 		DAD374F32C35AFCC005A4EDF /* ForecastCardViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCardViewSnapshotTests.swift; sourceTree = "<group>"; };
+		DAD374F62C36B021005A4EDF /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		DAD374F82C36B066005A4EDF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +237,7 @@
 		DAD374842C353CD4005A4EDF /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				DAD374F52C36B018005A4EDF /* Detail */,
 				DAD374852C353CD4005A4EDF /* Home */,
 			);
 			path = Scenes;
@@ -419,6 +424,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		DAD374F52C36B018005A4EDF /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				DAD374F62C36B021005A4EDF /* DetailViewModel.swift */,
+				DAD374F82C36B066005A4EDF /* DetailView.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -566,12 +580,14 @@
 				DAD374A72C355C0F005A4EDF /* ServerSys.swift in Sources */,
 				DAD374AD2C355EEB005A4EDF /* PartOfDay.swift in Sources */,
 				DAD374B52C3566DD005A4EDF /* GetForecastUseCase.swift in Sources */,
+				DAD374F92C36B066005A4EDF /* DetailView.swift in Sources */,
 				DAD3749B2C3542C9005A4EDF /* ServerForecastSlot.swift in Sources */,
 				DAD374992C35428B005A4EDF /* ServerForecast.swift in Sources */,
 				DAD374B22C3564EE005A4EDF /* Calendar+ParisWeather.swift in Sources */,
 				DAD374902C353ECD005A4EDF /* WeatherRepository.swift in Sources */,
 				DAD374AB2C355D36005A4EDF /* WeatherCondition.swift in Sources */,
 				DAD3749D2C3558C9005A4EDF /* Forecast.swift in Sources */,
+				DAD374F72C36B021005A4EDF /* DetailViewModel.swift in Sources */,
 				DAD3748D2C353E6F005A4EDF /* NetworkManager.swift in Sources */,
 				DAD374BA2C356BE7005A4EDF /* ForecastCardView.swift in Sources */,
 				DAD374A52C355BB0005A4EDF /* ServerWind.swift in Sources */,
