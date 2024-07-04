@@ -25,6 +25,7 @@ struct ServerForecastSlot: Codable {
                             precipitationProbability: Int(pop*100),
                             dateTimeTxt: dtTxt,
                             dateTime: getDate(),
+                            day: getDay(),
                             temperature: Int(main.temp),
                             feelsLikeTemperature: Int(main.feelsLike),
                             minTemperature: Int(main.tempMin),
@@ -70,6 +71,24 @@ fileprivate extension ServerForecastSlot {
             return PartOfDay.day
         } else {
             return PartOfDay.unknown
+        }
+    }
+    
+    func getDay() -> String {
+        
+        if let date = getDate() {
+            
+            let formatter = DateFormatter.weekDay
+            
+            let dayOfWeek = formatter.string(from: date)
+            
+            let numDay = Calendar.current.dateComponents([.day], from: date).day!
+            
+            return "\(dayOfWeek) \(numDay)"
+            
+        } else {
+            
+            return ""
         }
     }
 }

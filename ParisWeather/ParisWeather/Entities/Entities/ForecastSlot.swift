@@ -13,6 +13,7 @@ struct ForecastSlot {
     let precipitationProbability: Int
     let dateTimeTxt: String
     let dateTime: Date?
+    let day: String
     let temperature: Int
     let feelsLikeTemperature: Int
     let minTemperature: Int

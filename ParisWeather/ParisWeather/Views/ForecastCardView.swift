@@ -79,7 +79,7 @@ struct ForecastCardView: View {
                     .font(.footnote)
                     .foregroundStyle(Color.neutralText)
                 
-                Text("Wind: \(wind) km/h")
+                Text("Wind: \(wind) m/s")
                     .font(.footnote)
                     .foregroundStyle(Color.neutralText)
             }

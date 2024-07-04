@@ -14,6 +14,7 @@ final class ForecastSlotMock {
     let visibility = 10000
     let pop = 0.2
     let dtTxt = "2024-07-03 12:00:00"
+    let day = "Wednesday 3"
     let temperature = 18
     let feelsLikeTemperature = 18
     let minTemperature = 18
@@ -50,6 +51,7 @@ final class ForecastSlotMock {
                               pop: Int? = nil,
                               dtTxt: String? = nil,
                               date: Date? = nil,
+                              day: String? = nil,
                               temperature: Int? = nil,
                               feelsLikeTemperature: Int? = nil,
                               minTemperature: Int? = nil,
@@ -68,6 +70,7 @@ final class ForecastSlotMock {
                             precipitationProbability: pop ?? Int(self.pop),
                             dateTimeTxt: dtTxt ?? self.dtTxt,
                             dateTime: date ?? Date(),
+                            day: day ?? self.day,
                             temperature: temperature ?? self.temperature,
                             feelsLikeTemperature: feelsLikeTemperature ?? self.feelsLikeTemperature,
                             minTemperature: minTemperature ?? self.minTemperature,
