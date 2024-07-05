@@ -14,6 +14,15 @@ Decisions:
 
 Things to improve:
 - Add swiftlint
+- Add language param to api calls
+- Add cache to store forecast and not call it every time
+- Add wind direction
+
+# Screenshots
+<img src="https://github.com/xramos/ParisWeather/assets/1492227/1046a5bf-1002-45b5-8e5f-d0a851addaab" width="160" />
+<img src="https://github.com/xramos/ParisWeather/assets/1492227/56c1d559-36e9-4b0b-ba8f-fa296398eb35" width="160" />
+<img src="https://github.com/xramos/ParisWeather/assets/1492227/550948b7-8860-4847-b621-c3d16f77d477" width="160" />
+
 
 # vpTech iOS Coding Challenge: Weather App
 ## Objective
