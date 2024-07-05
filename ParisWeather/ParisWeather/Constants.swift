@@ -27,4 +27,11 @@ struct Constants {
     static let precipitationString = "Precipitation: %@%@"
     static let humidityString = "Humidity: %@%@"
     static let windString = "Wind: %@ m/s"
+    
+    static let windDetailString = "%@ m/s"
+    static let precipitationDetailString = "%@%@"
+    static let feelsTempDetailString = "%@°C"
+    static let visibilityDetailString = "%@ ms"
+    static let clouddinessDetailString = "%@%@"
+    static let humidityDetailString = "%@%@"
 }

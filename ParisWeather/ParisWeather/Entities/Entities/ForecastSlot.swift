@@ -30,3 +30,20 @@ struct ForecastSlot: Identifiable {
     let windGust: Double
     let partOfDay: PartOfDay
 }
+
+extension ForecastSlot {
+    
+    func getHour() -> String {
+        
+        if let date = dateTime {
+            
+            let formatter = DateFormatter.shortTime
+            
+            let hour = formatter.string(from: date)
+            
+            return hour
+        }
+        
+        return ""
+    }
+}

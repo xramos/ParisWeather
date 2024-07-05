@@ -23,18 +23,22 @@ struct DetailView: View {
                 
                 ForEach(viewModel.slots) { slot in
                     
-                    ForecastCardView(date: slot.day,
-                                     temperature: slot.temperature,
-                                     minTemperature: slot.minTemperature,
-                                     maxTemperature: slot.maxTemperature,
-                                     precipitation: slot.precipitationProbability,
-                                     humidity: slot.humidity,
-                                     wind: slot.windSpeed,
-                                     weatherIcon: slot.weatherConditions.first?.iconId ?? "")
+                    ForecastDetailCardView(hour: slot.getHour(),
+                                           temperature: slot.temperature,
+                                           maxTemperature: slot.maxTemperature,
+                                           minTemperature: slot.minTemperature,
+                                           windSpeed: slot.windSpeed,
+                                           precipitation: slot.precipitationProbability,
+                                           feelsLikeTemperature: slot.feelsLikeTemperature,
+                                           visibility: slot.averageVisibility,
+                                           clouddiness: slot.clouddiness,
+                                           humidity: slot.humidity,
+                                           weatherIcon: slot.weatherConditions.first?.iconId ?? "")
                 }
             }
             .padding(Constants.padding)
         }
+        .navigationTitle(viewModel.slots.first?.day ?? "")
     }
 }
 

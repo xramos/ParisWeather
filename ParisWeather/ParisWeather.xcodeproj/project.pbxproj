@@ -60,6 +60,8 @@
 		DAD374F42C35AFCC005A4EDF /* ForecastCardViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374F32C35AFCC005A4EDF /* ForecastCardViewSnapshotTests.swift */; };
 		DAD374F72C36B021005A4EDF /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374F62C36B021005A4EDF /* DetailViewModel.swift */; };
 		DAD374F92C36B066005A4EDF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374F82C36B066005A4EDF /* DetailView.swift */; };
+		DAD374FB2C37F876005A4EDF /* ForecastDetailCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374FA2C37F876005A4EDF /* ForecastDetailCardView.swift */; };
+		DAD374FD2C37FB9D005A4EDF /* ForecastItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374FC2C37FB9D005A4EDF /* ForecastItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +137,8 @@
 		DAD374F32C35AFCC005A4EDF /* ForecastCardViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCardViewSnapshotTests.swift; sourceTree = "<group>"; };
 		DAD374F62C36B021005A4EDF /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		DAD374F82C36B066005A4EDF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		DAD374FA2C37F876005A4EDF /* ForecastDetailCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDetailCardView.swift; sourceTree = "<group>"; };
+		DAD374FC2C37FB9D005A4EDF /* ForecastItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,6 +337,8 @@
 			isa = PBXGroup;
 			children = (
 				DAD374B92C356BE7005A4EDF /* ForecastCardView.swift */,
+				DAD374FA2C37F876005A4EDF /* ForecastDetailCardView.swift */,
+				DAD374FC2C37FB9D005A4EDF /* ForecastItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -588,8 +594,10 @@
 				DAD374AB2C355D36005A4EDF /* WeatherCondition.swift in Sources */,
 				DAD3749D2C3558C9005A4EDF /* Forecast.swift in Sources */,
 				DAD374F72C36B021005A4EDF /* DetailViewModel.swift in Sources */,
+				DAD374FB2C37F876005A4EDF /* ForecastDetailCardView.swift in Sources */,
 				DAD3748D2C353E6F005A4EDF /* NetworkManager.swift in Sources */,
 				DAD374BA2C356BE7005A4EDF /* ForecastCardView.swift in Sources */,
+				DAD374FD2C37FB9D005A4EDF /* ForecastItemView.swift in Sources */,
 				DAD374A52C355BB0005A4EDF /* ServerWind.swift in Sources */,
 				DAD374582C353875005A4EDF /* ParisWeatherApp.swift in Sources */,
 				DAD374A12C355B17005A4EDF /* ServerWeatherCondition.swift in Sources */,
