@@ -18,6 +18,7 @@ struct ParisWeatherApp: App {
                 
                 HomeView()
             }
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

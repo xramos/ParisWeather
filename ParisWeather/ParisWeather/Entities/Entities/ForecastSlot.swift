@@ -7,13 +7,15 @@
 
 import Foundation
 
-struct ForecastSlot {
+struct ForecastSlot: Identifiable {
     
+    let id: String = UUID().uuidString
     let averageVisibility: Int
     let precipitationProbability: Int
     let dateTimeTxt: String
     let dateTime: Date?
     let day: String
+    let hour: String
     let temperature: Int
     let feelsLikeTemperature: Int
     let minTemperature: Int

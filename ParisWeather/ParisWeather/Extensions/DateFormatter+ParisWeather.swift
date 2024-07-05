@@ -22,4 +22,14 @@ extension DateFormatter {
         formatter.dateFormat = "EEEE"
         return formatter
     }()
+    
+    static let shortTime: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .none
+        formatter.timeStyle = .short
+        formatter.calendar = Calendar(identifier: .iso8601)
+        formatter.timeZone = .current
+        formatter.locale = .current
+        return formatter
+    }()
 }

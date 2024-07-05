@@ -11,6 +11,8 @@ struct HomeView: View {
     
     @StateObject var viewModel: HomeViewModel = HomeViewModel()
     
+    @State var isDetailActive: Bool = false
+    
     var body: some View {
         
         ScrollView {
@@ -27,6 +29,11 @@ struct HomeView: View {
                                      humidity: forecast1.humidity,
                                      wind: forecast1.windSpeed,
                                      weatherIcon: forecast1.weatherConditions.first?.iconId ?? "")
+                    .onTapGesture {
+                        
+                        viewModel.selectedSlots = viewModel.slots1
+                        isDetailActive = true
+                    }
                 }
                 
                 if let forecast2 = viewModel.slots2.first {
@@ -39,6 +46,11 @@ struct HomeView: View {
                                      humidity: forecast2.humidity,
                                      wind: forecast2.windSpeed,
                                      weatherIcon: forecast2.weatherConditions.first?.iconId ?? "")
+                    .onTapGesture {
+                        
+                        viewModel.selectedSlots = viewModel.slots2
+                        isDetailActive = true
+                    }
                 }
                 
                 if let forecast3 = viewModel.slots3.first {
@@ -51,6 +63,11 @@ struct HomeView: View {
                                      humidity: forecast3.humidity,
                                      wind: forecast3.windSpeed,
                                      weatherIcon: forecast3.weatherConditions.first?.iconId ?? "")
+                    .onTapGesture {
+                        
+                        viewModel.selectedSlots = viewModel.slots3
+                        isDetailActive = true
+                    }
                 }
                 
                 if let forecast4 = viewModel.slots4.first {
@@ -63,6 +80,11 @@ struct HomeView: View {
                                      humidity: forecast4.humidity,
                                      wind: forecast4.windSpeed,
                                      weatherIcon: forecast4.weatherConditions.first?.iconId ?? "")
+                    .onTapGesture {
+                        
+                        viewModel.selectedSlots = viewModel.slots4
+                        isDetailActive = true
+                    }
                 }
                 
                 if let forecast5 = viewModel.slots5.first {
@@ -75,6 +97,11 @@ struct HomeView: View {
                                      humidity: forecast5.humidity,
                                      wind: forecast5.windSpeed,
                                      weatherIcon: forecast5.weatherConditions.first?.iconId ?? "")
+                    .onTapGesture {
+                        
+                        viewModel.selectedSlots = viewModel.slots5
+                        isDetailActive = true
+                    }
                 }
             }
             .padding(Constants.padding)
@@ -82,7 +109,12 @@ struct HomeView: View {
         .navigationTitle("Paris Forecast")
         .task {
             
+            isDetailActive = false
             viewModel.getForecast()
+        }
+        .navigationDestination(isPresented: $isDetailActive) {
+            
+            DetailView(slots: viewModel.selectedSlots)
         }
     }
 }
