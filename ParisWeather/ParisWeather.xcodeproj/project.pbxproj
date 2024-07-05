@@ -62,6 +62,8 @@
 		DAD374F92C36B066005A4EDF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374F82C36B066005A4EDF /* DetailView.swift */; };
 		DAD374FB2C37F876005A4EDF /* ForecastDetailCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374FA2C37F876005A4EDF /* ForecastDetailCardView.swift */; };
 		DAD374FD2C37FB9D005A4EDF /* ForecastItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374FC2C37FB9D005A4EDF /* ForecastItemView.swift */; };
+		DAD374FF2C38439D005A4EDF /* ForecastItemViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374FE2C38439D005A4EDF /* ForecastItemViewSnapshotTests.swift */; };
+		DAD375012C3844DB005A4EDF /* ForecastDetailCardViewSnaphotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD375002C3844DB005A4EDF /* ForecastDetailCardViewSnaphotTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +141,8 @@
 		DAD374F82C36B066005A4EDF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		DAD374FA2C37F876005A4EDF /* ForecastDetailCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDetailCardView.swift; sourceTree = "<group>"; };
 		DAD374FC2C37FB9D005A4EDF /* ForecastItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastItemView.swift; sourceTree = "<group>"; };
+		DAD374FE2C38439D005A4EDF /* ForecastItemViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastItemViewSnapshotTests.swift; sourceTree = "<group>"; };
+		DAD375002C3844DB005A4EDF /* ForecastDetailCardViewSnaphotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDetailCardViewSnaphotTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -426,6 +430,8 @@
 			isa = PBXGroup;
 			children = (
 				DAD374F32C35AFCC005A4EDF /* ForecastCardViewSnapshotTests.swift */,
+				DAD374FE2C38439D005A4EDF /* ForecastItemViewSnapshotTests.swift */,
+				DAD375002C3844DB005A4EDF /* ForecastDetailCardViewSnaphotTests.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -614,9 +620,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD374FF2C38439D005A4EDF /* ForecastItemViewSnapshotTests.swift in Sources */,
 				DAD374DC2C359920005A4EDF /* ForecastMainMock.swift in Sources */,
 				DAD374D42C35979F005A4EDF /* ServerCloudsUnitTests.swift in Sources */,
 				DAD374C62C358ACF005A4EDF /* GetForecastUseCaseUnitTests.swift in Sources */,
+				DAD375012C3844DB005A4EDF /* ForecastDetailCardViewSnaphotTests.swift in Sources */,
 				DAD374EC2C35A6A1005A4EDF /* HomeViewModelUnitTests.swift in Sources */,
 				DAD374C42C358A63005A4EDF /* MockWeatherRepository.swift in Sources */,
 				DAD374DE2C359A6F005A4EDF /* ForecastSlotMock.swift in Sources */,

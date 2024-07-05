@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PreviewSnapshots
 
 struct ForecastItemView: View {
     
@@ -40,8 +41,22 @@ struct ForecastItemView: View {
     }
 }
 
-#Preview {
-    ForecastItemView(imageName: "drop.degreesign",
-                     description: "PRECICIPITATION",
-                     value: "0%")
+struct ForecastItemView_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        
+        snapshots.previews.previewLayout(.sizeThatFits)
+    }
+    
+    static var snapshots: PreviewSnapshots<String> {
+        
+        PreviewSnapshots(configurations: [
+            .init(name: "Default", state: "")
+        ], configure: { state in
+                
+            ForecastItemView(imageName: "drop.degreesign",
+                             description: "PRECICIPITATION",
+                             value: "0%")
+        })
+    }
 }

@@ -12,6 +12,4 @@ class DetailViewModel: ObservableObject {
     // Values
     
     @Published var slots: [ForecastSlot] = []
-    
-    // MARK: Methods
 }
