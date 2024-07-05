@@ -15,6 +15,7 @@ struct ForecastSlot: Identifiable {
     let dateTimeTxt: String
     let dateTime: Date?
     let day: String
+    let hour: String
     let temperature: Int
     let feelsLikeTemperature: Int
     let minTemperature: Int
@@ -29,21 +30,4 @@ struct ForecastSlot: Identifiable {
     let windDirection: Int
     let windGust: Double
     let partOfDay: PartOfDay
-}
-
-extension ForecastSlot {
-    
-    func getHour() -> String {
-        
-        if let date = dateTime {
-            
-            let formatter = DateFormatter.shortTime
-            
-            let hour = formatter.string(from: date)
-            
-            return hour
-        }
-        
-        return ""
-    }
 }

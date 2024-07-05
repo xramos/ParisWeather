@@ -26,6 +26,7 @@ struct ServerForecastSlot: Codable {
                             dateTimeTxt: dtTxt,
                             dateTime: getDate(),
                             day: getDay(),
+                            hour: getHour(),
                             temperature: Int(main.temp),
                             feelsLikeTemperature: Int(main.feelsLike),
                             minTemperature: Int(main.tempMin),
@@ -90,5 +91,19 @@ fileprivate extension ServerForecastSlot {
             
             return ""
         }
+    }
+    
+    func getHour() -> String {
+        
+        if let date = getDate() {
+            
+            let formatter = DateFormatter.shortTime
+            
+            let hour = formatter.string(from: date)
+            
+            return hour
+        }
+        
+        return ""
     }
 }

@@ -23,7 +23,7 @@ struct DetailView: View {
                 
                 ForEach(viewModel.slots) { slot in
                     
-                    ForecastDetailCardView(hour: slot.getHour(),
+                    ForecastDetailCardView(hour: slot.hour,
                                            temperature: slot.temperature,
                                            maxTemperature: slot.maxTemperature,
                                            minTemperature: slot.minTemperature,
