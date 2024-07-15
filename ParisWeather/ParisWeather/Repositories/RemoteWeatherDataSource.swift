@@ -51,8 +51,6 @@ extension RemoteWeatherDataSource {
                           URLQueryItem(name: "mode", value: "json"),
                           URLQueryItem(name: "appid", value: Constants.apiKey)]
         
-        // TODO: Add lang parameter to use language of device
-        
         components?.queryItems = queryItems
         
         let urlRequest = URLRequest(url: (components?.url!)!)

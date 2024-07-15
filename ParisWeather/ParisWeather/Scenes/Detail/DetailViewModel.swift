@@ -11,5 +11,5 @@ class DetailViewModel: ObservableObject {
     
     // Values
     
-    @Published var slots: [ForecastSlot] = []
+    var slots: [ForecastSlot] = []
 }
