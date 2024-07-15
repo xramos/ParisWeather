@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DACB36B32C450BF100BC6264 /* GetForecastUseCaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB36B22C450BF100BC6264 /* GetForecastUseCaseImplementation.swift */; };
+		DACB36B52C45120F00BC6264 /* MockGetForecastUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB36B42C45120F00BC6264 /* MockGetForecastUseCase.swift */; };
 		DAD374582C353875005A4EDF /* ParisWeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD374572C353875005A4EDF /* ParisWeatherApp.swift */; };
 		DAD3745C2C353876005A4EDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD3745B2C353876005A4EDF /* Assets.xcassets */; };
 		DAD374602C353876005A4EDF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD3745F2C353876005A4EDF /* Preview Assets.xcassets */; };
@@ -86,6 +87,7 @@
 
 /* Begin PBXFileReference section */
 		DACB36B22C450BF100BC6264 /* GetForecastUseCaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetForecastUseCaseImplementation.swift; sourceTree = "<group>"; };
+		DACB36B42C45120F00BC6264 /* MockGetForecastUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetForecastUseCase.swift; sourceTree = "<group>"; };
 		DAD374542C353875005A4EDF /* ParisWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParisWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD374572C353875005A4EDF /* ParisWeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParisWeatherApp.swift; sourceTree = "<group>"; };
 		DAD3745B2C353876005A4EDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 				DAD374D92C3598C0005A4EDF /* SysMock.swift */,
 				DAD374DB2C359920005A4EDF /* ForecastMainMock.swift */,
 				DAD374DD2C359A6F005A4EDF /* ForecastSlotMock.swift */,
+				DACB36B42C45120F00BC6264 /* MockGetForecastUseCase.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -641,6 +644,7 @@
 				DAD374E22C359ED6005A4EDF /* ServerSysMockUnitTests.swift in Sources */,
 				DAD374E62C35A160005A4EDF /* ServerForecastSlotUnitTests.swift in Sources */,
 				DAD374C82C358BB9005A4EDF /* RemoteWeatherDataSourceUnitTests.swift in Sources */,
+				DACB36B52C45120F00BC6264 /* MockGetForecastUseCase.swift in Sources */,
 				DAD374CE2C359465005A4EDF /* ServerWeatherConditionUnitTests.swift in Sources */,
 				DAD374E42C359F57005A4EDF /* ServerForecastMainUnitTests.swift in Sources */,
 				DAD374E02C359DBC005A4EDF /* ServerWindMockUnitTests.swift in Sources */,

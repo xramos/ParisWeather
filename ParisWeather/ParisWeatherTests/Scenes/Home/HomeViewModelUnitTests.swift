@@ -72,4 +72,17 @@ final class HomeViewModelUnitTests: XCTestCase {
         XCTAssertNotNil(response)
         XCTAssertEqual(response?.count, 3)
     }
+    
+    func testUseCaseCalled() {
+        
+        // Given
+        let useCase = MockGetForecastUseCase()
+        sut = HomeViewModel(useCase: useCase)
+        
+        // When
+        sut?.getForecast()
+        
+        // Then
+        XCTAssertTrue(useCase.isExecuteCalled)
+    }
 }
