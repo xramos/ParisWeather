@@ -12,6 +12,8 @@ class HomeViewModel: ObservableObject {
     
     // Values
     
+    let useCase: GetForecastUseCase
+    
     @Published var slots1: [ForecastSlot] = []
     @Published var slots2: [ForecastSlot] = []
     @Published var slots3: [ForecastSlot] = []
@@ -24,9 +26,14 @@ class HomeViewModel: ObservableObject {
     
     // MARK: - Methods
     
+    init(useCase: GetForecastUseCase = GetForecastUseCaseImplementation()) {
+        
+        self.useCase = useCase
+    }
+    
     func getForecast() {
         
-        getForecastCancellable = GetForecastUseCase().execute()
+        getForecastCancellable = useCase.execute()
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 

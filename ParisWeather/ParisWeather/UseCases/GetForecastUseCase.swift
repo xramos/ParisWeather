@@ -8,17 +8,7 @@
 import Foundation
 import Combine
 
-class GetForecastUseCase {
+protocol GetForecastUseCase {
     
-    private let repository: WeatherRepository
-    
-    init(repository: WeatherRepository = WeatherRepositoryImplementation()) {
-        
-        self.repository = repository
-    }
-    
-    func execute() -> AnyPublisher<Forecast, Error> {
-        
-        return repository.getForecast()
-    }
+    func execute() -> AnyPublisher<Forecast, Error>
 }
