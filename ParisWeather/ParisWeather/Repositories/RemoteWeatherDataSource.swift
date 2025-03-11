@@ -8,6 +8,10 @@
 import Foundation
 import Combine
 
+protocol RemoteWeatherDataSourceContract {
+    func getForecast() -> AnyPublisher<ServerForecast, Error>
+}
+
 class RemoteWeatherDataSource {
     
     // URLs
@@ -25,13 +29,14 @@ class RemoteWeatherDataSource {
         self.baseURLString = baseURLString ?? Constants.baseURL
         self.session = session
     }
+}
+
+extension RemoteWeatherDataSource: RemoteWeatherDataSourceContract {
     
     func getForecast() -> AnyPublisher<ServerForecast, Error> {
         
         let networkManger = NetworkManager(baseURL: baseURLString, session: session)
-        
         let urlRequest = getForecastEndpoint()
-        
         return networkManger.performRequest(urlRequest: urlRequest)
     }
 }

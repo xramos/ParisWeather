@@ -16,7 +16,7 @@ struct ParisWeatherApp: App {
             
             NavigationStack {
                 
-                HomeView()
+                HomeView(viewModel: HomeViewModel())
             }
             .navigationBarTitleDisplayMode(.inline)
         }

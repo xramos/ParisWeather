@@ -9,7 +9,8 @@ import Foundation
 
 struct ServerForecastSlot: Codable {
     
-    let visibility: Int
+    // visibility is no longer present in service
+    //let visibility: Int
     let pop: Double
     let dtTxt: String
     
@@ -21,7 +22,7 @@ struct ServerForecastSlot: Codable {
     
     func convertToEntity() -> ForecastSlot {
         
-        return ForecastSlot(averageVisibility: visibility,
+        return ForecastSlot(averageVisibility: 0,
                             precipitationProbability: Int(pop*100),
                             dateTimeTxt: dtTxt,
                             dateTime: getDate(),

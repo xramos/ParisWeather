@@ -9,101 +9,23 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @StateObject var viewModel: HomeViewModel = HomeViewModel()
+    var viewModel: HomeViewModelContract
     
     @State var isDetailActive: Bool = false
+    
+    @State var slots1: [ForecastSlot] = []
+    @State var slots2: [ForecastSlot] = []
+    @State var slots3: [ForecastSlot] = []
+    @State var slots4: [ForecastSlot] = []
+    @State var slots5: [ForecastSlot] = []
+    
+    @State var selectedSlots: [ForecastSlot] = []
     
     var body: some View {
         
         ScrollView {
             
-            VStack {
-                
-                if let forecast1 = viewModel.slots1.first {
-                    
-                    ForecastCardView(date: forecast1.day,
-                                        temperature: forecast1.temperature,
-                                     minTemperature: forecast1.minTemperature,
-                                     maxTemperature: forecast1.maxTemperature,
-                                     precipitation: forecast1.precipitationProbability,
-                                     humidity: forecast1.humidity,
-                                     wind: forecast1.windSpeed,
-                                     weatherIcon: forecast1.weatherConditions.first?.iconId ?? "")
-                    .onTapGesture {
-                        
-                        viewModel.selectedSlots = viewModel.slots1
-                        isDetailActive = true
-                    }
-                }
-                
-                if let forecast2 = viewModel.slots2.first {
-                    
-                    ForecastCardView(date: forecast2.day,
-                                     temperature: forecast2.temperature,
-                                     minTemperature: forecast2.minTemperature,
-                                     maxTemperature: forecast2.maxTemperature,
-                                     precipitation: forecast2.precipitationProbability,
-                                     humidity: forecast2.humidity,
-                                     wind: forecast2.windSpeed,
-                                     weatherIcon: forecast2.weatherConditions.first?.iconId ?? "")
-                    .onTapGesture {
-                        
-                        viewModel.selectedSlots = viewModel.slots2
-                        isDetailActive = true
-                    }
-                }
-                
-                if let forecast3 = viewModel.slots3.first {
-                 
-                    ForecastCardView(date: forecast3.day,
-                                     temperature: forecast3.temperature,
-                                     minTemperature: forecast3.minTemperature,
-                                     maxTemperature: forecast3.maxTemperature,
-                                     precipitation: forecast3.precipitationProbability,
-                                     humidity: forecast3.humidity,
-                                     wind: forecast3.windSpeed,
-                                     weatherIcon: forecast3.weatherConditions.first?.iconId ?? "")
-                    .onTapGesture {
-                        
-                        viewModel.selectedSlots = viewModel.slots3
-                        isDetailActive = true
-                    }
-                }
-                
-                if let forecast4 = viewModel.slots4.first {
-                    
-                    ForecastCardView(date: forecast4.day,
-                        temperature: forecast4.temperature,
-                                     minTemperature: forecast4.minTemperature,
-                                     maxTemperature: forecast4.maxTemperature,
-                                     precipitation: forecast4.precipitationProbability,
-                                     humidity: forecast4.humidity,
-                                     wind: forecast4.windSpeed,
-                                     weatherIcon: forecast4.weatherConditions.first?.iconId ?? "")
-                    .onTapGesture {
-                        
-                        viewModel.selectedSlots = viewModel.slots4
-                        isDetailActive = true
-                    }
-                }
-                
-                if let forecast5 = viewModel.slots5.first {
-                    
-                    ForecastCardView(date: forecast5.day,
-                        temperature: forecast5.temperature,
-                                     minTemperature: forecast5.minTemperature,
-                                     maxTemperature: forecast5.maxTemperature,
-                                     precipitation: forecast5.precipitationProbability,
-                                     humidity: forecast5.humidity,
-                                     wind: forecast5.windSpeed,
-                                     weatherIcon: forecast5.weatherConditions.first?.iconId ?? "")
-                    .onTapGesture {
-                        
-                        viewModel.selectedSlots = viewModel.slots5
-                        isDetailActive = true
-                    }
-                }
-            }
+            contentView
             .padding(Constants.padding)
         }
         .navigationTitle("Paris Forecast")
@@ -114,11 +36,54 @@ struct HomeView: View {
         }
         .navigationDestination(isPresented: $isDetailActive) {
             
-            DetailView(slots: viewModel.selectedSlots)
+            DetailView(viewModel: DetailViewModel(slots: selectedSlots))
+            
+        }.onReceive(viewModel.slots1Publisher) {
+            slots1 = $0
+        }.onReceive(viewModel.slots2Publisher) {
+            slots2 = $0
+        }.onReceive(viewModel.slots3Publisher) {
+            slots3 = $0
+        }.onReceive(viewModel.slots4Publisher) {
+            slots4 = $0
+        }.onReceive(viewModel.slots5Publisher) {
+            slots5 = $0
+        }
+    }
+}
+
+private extension HomeView {
+    
+    @ViewBuilder
+    var contentView: some View {
+        VStack {
+            forecastView(for: slots1)
+            forecastView(for: slots2)
+            forecastView(for: slots3)
+            forecastView(for: slots4)
+            forecastView(for: slots5)
+        }
+    }
+    
+    @ViewBuilder
+    func forecastView(for slots: [ForecastSlot]) -> some View {
+        if let forecast = slots.first {
+            ForecastCardView(date: forecast.day,
+                             temperature: forecast.temperature,
+                             minTemperature: forecast.minTemperature,
+                             maxTemperature: forecast.maxTemperature,
+                             precipitation: forecast.precipitationProbability,
+                             humidity: forecast.humidity,
+                             wind: forecast.windSpeed,
+                             weatherIcon: forecast.weatherConditions.first?.iconId ?? "")
+            .onTapGesture {
+                self.selectedSlots = slots
+                isDetailActive = true
+            }
         }
     }
 }
 
 #Preview {
-    HomeView()
+    HomeView(viewModel: HomeViewModel())
 }

@@ -10,7 +10,7 @@ import Combine
 
 @testable import ParisWeather
 
-class MockWeatherRepository: WeatherRepository {
+class MockWeatherRepository: WeatherRepositoryContract {
     
     var isGetForecastCalled: Bool = false
     

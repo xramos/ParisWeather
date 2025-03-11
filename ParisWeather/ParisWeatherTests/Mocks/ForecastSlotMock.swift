@@ -32,12 +32,10 @@ final class ForecastSlotMock {
     
     // MARK: - ServerForecastSlot
     
-    func generateServerForecastSlot(visibility: Int? = nil,
-                                    pop: Double? = nil,
+    func generateServerForecastSlot(pop: Double? = nil,
                                     dtTxt: String? = nil) -> ServerForecastSlot {
         
-        return ServerForecastSlot(visibility: visibility ?? self.visibility,
-                                  pop: pop ?? self.pop,
+        return ServerForecastSlot(pop: pop ?? self.pop,
                                   dtTxt: dtTxt ?? self.dtTxt,
                                   main: ForecastMainMock().generateServerForecastMain(),
                                   weather: [],

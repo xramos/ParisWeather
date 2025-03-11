@@ -1,5 +1,5 @@
 //
-//  WeatherRepositoryImplementationUnitTests.swift
+//  WeatherRepositoryUnitTests.swift
 //  ParisWeatherTests
 //
 //  Created by Xavier Ramos on 3/7/24.
@@ -10,9 +10,9 @@ import Combine
 
 @testable import ParisWeather
 
-final class WeatherRepositoryImplementationUnitTests: XCTestCase {
+final class WeatherRepositoryUnitTests: XCTestCase {
 
-    var sut: WeatherRepositoryImplementation?
+    var sut: WeatherRepository?
     var cancellable: AnyCancellable?
     
     let baseUrlString = "http://jsonplaceholder.typicode.com"
@@ -31,7 +31,7 @@ final class WeatherRepositoryImplementationUnitTests: XCTestCase {
 
 // MARK: - Get Forecast
 
-extension WeatherRepositoryImplementationUnitTests {
+extension WeatherRepositoryUnitTests {
     
     func testGetForecastOK() {
         
@@ -41,7 +41,7 @@ extension WeatherRepositoryImplementationUnitTests {
         let remote = RemoteWeatherDataSource(baseURLString: baseUrlString,
                                              session: session)
         
-        sut = WeatherRepositoryImplementation(remoteDataSource: remote)
+        sut = WeatherRepository(remoteDataSource: remote)
         
         let exp = expectation(description: "expected forecast")
         
@@ -72,7 +72,7 @@ extension WeatherRepositoryImplementationUnitTests {
         let remote = RemoteWeatherDataSource(baseURLString: baseUrlString,
                                              session: session)
         
-        sut = WeatherRepositoryImplementation(remoteDataSource: remote)
+        sut = WeatherRepository(remoteDataSource: remote)
         
         let exp = expectation(description: "expected forecast")
         
@@ -99,7 +99,7 @@ extension WeatherRepositoryImplementationUnitTests {
 
 // MARK: - Session
 
-fileprivate extension WeatherRepositoryImplementationUnitTests {
+fileprivate extension WeatherRepositoryUnitTests {
     
     func getForecastSession(statusCode: Int) -> URLSession {
         

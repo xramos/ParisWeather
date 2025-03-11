@@ -14,18 +14,15 @@ final class ServerForecastSlotUnitTests: XCTestCase {
     func testInit() {
         
         // Given
-        let visibility = 10000
         let pop = 0.2
         let dtTxt = "2024-07-03 12:00:00"
         
         // When
-        let response = ForecastSlotMock().generateServerForecastSlot(visibility: visibility,
-                                                                     pop: pop,
+        let response = ForecastSlotMock().generateServerForecastSlot(pop: pop,
                                                                      dtTxt:dtTxt)
         
         // Then
         XCTAssertNotNil(response)
-        XCTAssertEqual(response.visibility, visibility)
         XCTAssertEqual(response.pop, pop)
         XCTAssertEqual(response.dtTxt, dtTxt)
     }
@@ -40,7 +37,6 @@ final class ServerForecastSlotUnitTests: XCTestCase {
         
         // Then
         XCTAssertNotNil(response)
-        XCTAssertEqual(response.averageVisibility, request.visibility)
         XCTAssertEqual(response.precipitationProbability, Int(request.pop*100))
         XCTAssertEqual(response.dateTimeTxt, request.dtTxt)
     }

@@ -6,10 +6,24 @@
 //
 
 import Foundation
+import Combine
 
-class DetailViewModel: ObservableObject {
+protocol DetailViewModelContract {
+    var slotsPublisher: AnyPublisher<[ForecastSlot], Never> { get }
+}
+
+class DetailViewModel {
     
-    // Values
+    @Published var slots: [ForecastSlot] = []
     
-    var slots: [ForecastSlot] = []
+    init(slots: [ForecastSlot]) {
+        self.slots = slots
+    }
+}
+
+extension DetailViewModel: DetailViewModelContract {
+    
+    var slotsPublisher: AnyPublisher<[ForecastSlot], Never> {
+        $slots.eraseToAnyPublisher()
+    }
 }

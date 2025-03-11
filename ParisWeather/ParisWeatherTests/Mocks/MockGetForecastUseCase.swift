@@ -10,7 +10,7 @@ import Combine
 
 @testable import ParisWeather
 
-class MockGetForecastUseCase: GetForecastUseCase {
+class MockGetForecastUseCase: GetForecastUseCaseContract {
     
     var isExecuteCalled: Bool = false
     

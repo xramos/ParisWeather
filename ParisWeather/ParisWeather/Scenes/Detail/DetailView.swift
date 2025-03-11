@@ -9,11 +9,9 @@ import SwiftUI
 
 struct DetailView: View {
     
-    @ObservedObject var viewModel: DetailViewModel = DetailViewModel()
+    var viewModel: DetailViewModelContract
     
-    init(slots: [ForecastSlot]) {
-        self.viewModel.slots = slots
-    }
+    @State var slots: [ForecastSlot] = []
     
     var body: some View {
         
@@ -21,7 +19,7 @@ struct DetailView: View {
             
             VStack {
                 
-                ForEach(viewModel.slots) { slot in
+                ForEach(slots) { slot in
                     
                     ForecastDetailCardView(hour: slot.hour,
                                            temperature: slot.temperature,
@@ -38,10 +36,13 @@ struct DetailView: View {
             }
             .padding(Constants.padding)
         }
-        .navigationTitle(viewModel.slots.first?.day ?? "")
+        .navigationTitle(slots.first?.day ?? "")
+        .onReceive(viewModel.slotsPublisher) {
+            slots = $0
+        }
     }
 }
 
 #Preview {
-    DetailView(slots: [])
+    DetailView(viewModel: DetailViewModel(slots: []))
 }

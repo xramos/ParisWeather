@@ -8,7 +8,24 @@
 import Foundation
 import Combine
 
-protocol GetForecastUseCase {
-    
+protocol GetForecastUseCaseContract {
     func execute() -> AnyPublisher<Forecast, Error>
+}
+
+class GetForecastUseCase {
+    
+    private let repository: WeatherRepositoryContract
+    
+    init(repository: WeatherRepositoryContract = WeatherRepository()) {
+        
+        self.repository = repository
+    }
+}
+
+extension GetForecastUseCase: GetForecastUseCaseContract {
+    
+    func execute() -> AnyPublisher<Forecast, Error> {
+        
+        return repository.getForecast()
+    }
 }
